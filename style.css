@@ -188,7 +188,8 @@ div.pendingDrop {
     .container {
       padding: 5px;
     }
-    .source {grid-template-columns: repeat(4,1fr);}
+    .source {grid-template-columns: repeat(5,1fr);}
+    .source.span {grid-template-columns: repeat(4,1fr);}
     .source span {font-size: 12pt;}
     .source div {
         width: 35px;
@@ -211,7 +212,5 @@ div.pendingDrop {
        height: 40px;
        font-size: 20px;
      }
-     br {
-      display: none;
-     }
+
   }
