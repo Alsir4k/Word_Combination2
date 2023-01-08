@@ -183,16 +183,17 @@ div.pendingDrop {
       padding: 5px;
     }
     .source {grid-template-columns: repeat(4,1fr);}
-    .source span {font-size: 16pt;}
+    .source span {font-size: 12pt;}
     .source div {
-        width: 40px;
+        width: 35px;
         height: 27px;
         font-size: 16pt;
         margin: 1px;
+        padding: 5px;
     } 
     .sectionDropArea {
       margin-top: 2px;
-      height: 130px;
+      height: 150px;
        gap: 2px;
     }
     .drop {font-size: 20pt;}
@@ -200,5 +201,8 @@ div.pendingDrop {
       width: 60px;
        height: 40px;
        font-size: 20px;
+     }
+     br {
+      display: none;
      }
   }
