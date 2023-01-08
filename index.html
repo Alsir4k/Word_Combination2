@@ -1,0 +1,96 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>تركيب الكلمات</title>
+        <link rel="stylesheet" type="text/css" href="style.css" />
+        <link rel="icon" href="icon.ico">
+        <script src="http://code.jquery.com/jquery-3.1.0.min.js"></script>
+        <script src="./jquery.drag-drop.plugin.js"></script>
+        <script>
+            $(function() {
+                $("#source>div").dragdrop({
+                    makeClone: true,
+                    sourceClass: "pendingDrop",
+                    dropClass: "highlight",
+                    container: $('.content'),
+                    didDrop: function($src, $dst) {
+                        if ($dst.attr("id")!="destination")
+                            $dst = $dst.parents("#destination");
+                        var currentText = $dst.text();
+                        currentText += $src.text();
+                        $dst.text(currentText);
+                    }
+                });
+
+            });
+        </script>
+    </head>
+    <body>
+        <h2>اختر الحروف</h2>
+         <div class="content">
+            <div class="container">
+            <div id="source" class="source boxes">
+                <div>ا</div>
+                <div>ب</div>
+                <div>ت</div>
+                <div>ث</div>
+                <div>ج</div>
+                <div>ح</div>
+                <div>خ</div>
+                <div>د</div>
+                <div>ذ</div>
+                <div>ر</div>
+                <div>ز</div>
+                <div>س</div>
+                <div>ش</div>
+                <div>ص</div>
+                <div>ض</div>
+                <div>ط</div>
+                <div>ظ</div>
+                <div>ع</div>
+                <div>غ</div>
+                <div>ف</div>
+                <div>ق</div>
+                <div>ك</div>
+                <div>ل</div>
+                <div>م</div>
+                <div>ن</div>
+                <div>ه</div>
+                <div>و</div>
+                <div>ي</div>
+
+            </div>
+            <br>
+            <div id="source" class="source">
+                <span><p>فتحة:</p></span>
+                <div>َ</div>
+                <span><p>كسرة:</p></span>
+                <div>ِ</div>
+                <span><p>ضمة:</p></span>
+                <div>ُ</div>
+                <span><p>تنوين فتح:</p></span>
+                <div>ً</div>
+                <span><p>تنوين كسر:</p></span>
+                <div>ٍ</div>
+                <span><p>تنوين ضم:</p></span>
+                <div>ٌ</div>
+                <span><p>شدة:</p></span>
+                <div>ّ</div>
+                <span><p>سكون:</p></span>
+                <div>ْ</div>
+                <span><p>مسافة:</p></span>
+                <div> </div>
+            </div>
+        </div>
+        <div class="sectionDropArea">
+            <h2>كوّن كلمة</h2>
+            <div id="destination" class="drop boxes"></div>
+            <button class="btn" onClick="window.location.reload();">حذف</button>
+        </div>
+
+    </body>
+</html>
+
