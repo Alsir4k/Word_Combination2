@@ -175,27 +175,30 @@ div.pendingDrop {
   @media (max-width: 450px) {
     body {
       gap: 0px;
-      margin-top: 3px;
+      margin-top: 2px;
     }
-    h2 {font-size: 22pt;}
-    div.content {padding: 5px;}
-
+    h2 {font-size: 20pt;}
+    div.content {padding: 2px;}
+    .container {
+      padding: 5px;
+    }
     .source {grid-template-columns: repeat(4,1fr);}
-    .source span {font-size: 18pt;}
+    .source span {font-size: 16pt;}
     .source div {
-        width: 50px;
-        height: 35px;
-        font-size: 18pt;
+        width: 40px;
+        height: 27px;
+        font-size: 16pt;
+        margin: 1px;
     } 
     .sectionDropArea {
-      margin-top: 5px;
-      height: 150px;
-       gap: 3px;
+      margin-top: 2px;
+      height: 130px;
+       gap: 2px;
     }
-    .drop {font-size: 22pt;}
+    .drop {font-size: 20pt;}
     .btn {
-      width: 70px;
-       height: 45px;
-       font-size: 28px;
+      width: 60px;
+       height: 40px;
+       font-size: 20px;
      }
   }
