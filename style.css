@@ -154,11 +154,12 @@ div.pendingDrop {
     }
     div.content {padding: 5px;}
     .source {grid-template-columns: repeat(6,1fr);}
-    .source span {font-size: 22pt;}
+    .source span {font-size: 16pt;}
     .source div {
         width: 60px;
         height: 50px;
         font-size: 24pt;
+        padding: 5px;
     } 
     .sectionDropArea {
       margin-top: 5px;
