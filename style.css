@@ -163,6 +163,7 @@ div.pendingDrop {
     } 
     .sectionDropArea {
       margin-top: 5px;
+      height: 150px;
       gap: 3px;
     }
     .drop {font-size: 28pt;}
@@ -170,6 +171,9 @@ div.pendingDrop {
       width: 70px;
        height: 45px;
        font-size: 28px;
+     }
+     br {
+      display: none;
      }
   }
 
