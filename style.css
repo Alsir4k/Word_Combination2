@@ -59,6 +59,7 @@ div.content {
   font-size: 24pt;
   font-weight: bold;
   text-align: center;
+  line-height: 1;
 }
 .source span p {
   margin: 0;
