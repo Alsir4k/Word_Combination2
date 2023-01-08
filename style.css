@@ -201,7 +201,10 @@ div.pendingDrop {
       height: 150px;
        gap: 2px;
     }
-    .drop {font-size: 20pt;}
+    .drop {
+      font-size: 20pt;
+      padding-top: 10px;
+    }
     .btn {
       width: 60px;
        height: 40px;
