@@ -1,67 +1,71 @@
-*{
-    padding: 0;
-    margin: 0;
-    font-family: sans-serif;
-  }
-  
-  body {
-    direction: rtl;
-    background-color: #F1F2F7;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: auto;
-    flex-direction: column;
-    gap: 10px;
-    padding: auto;
-    margin-top: 20px;
-  }
-  
-  h2 {
-    font-size: 26pt;
-    color: #287E8F;
-  }
+* {
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif;
+}
 
-  .content {
-    width: 95%;
-  }
+body {
+  direction: rtl;
+  background-color: #f1f2f7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  flex-direction: column;
+  gap: 10px;
+  padding: auto;
+  margin-top: 20px;
+}
 
-  .container {
-    background-color: #F8FAFC;
-    border: 1px solid #E6E6E6;
-    border-radius: 10px;
-    padding: 10px;
-    display: block;
-    overflow: auto;
-    text-align: center;
-    margin: auto;
-  }
+h2 {
+  font-size: 26pt;
+  color: #287e8f;
+}
+
+hr {
+  border: 1px solid #e6e6e6;
+}
+
+.content {
+  width: 95%;
+}
+
+.container {
+  background-color: #f8fafc;
+  border: 1px solid #e6e6e6;
+  border-radius: 10px;
+  padding: 10px;
+  display: block;
+  overflow: auto;
+  text-align: center;
+  margin: auto;
+}
 
 div.content {
-    padding: 20px;
-    margin: auto;
+  padding: 20px;
+  margin: auto;
 }
 
-.source {
-    width: 100%;
-    height: 100%;
-    margin: auto;
-    display: grid;
-    grid-template-columns: repeat(14,1fr);
-    grid-auto-rows: auto;
-    justify-items: center;
-    text-align: center;
+.boxesContainer {
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(14, 1fr);
+  grid-auto-rows: auto;
+  justify-items: center;
+  text-align: center;
 }
 
-.source span {
+.boxesContainer span {
   position: relative;
-  color: #287E8F;
+  color: #287e8f;
   font-size: 24pt;
   font-weight: bold;
   text-align: center;
   line-height: 1;
 }
-.source span p {
+.boxesContainer span p {
   margin: 0;
   position: absolute;
   top: 50%;
@@ -70,21 +74,21 @@ div.content {
   transform: translate(-50%, -50%);
 }
 
-.source div {
-    float: right;
-    width: 75px;
-    height: 70px;
-    background-color: #287E8F;
-    color: #F8FAFC;
-    font-size: 34pt;
-    font-weight: bold;
-    text-align: center;
-    margin: 3px;
-    padding-top: 10px;
-    cursor: pointer;
+.boxesContainer div {
+  float: right;
+  width: 75px;
+  height: 70px;
+  background-color: #287e8f;
+  color: #f8fafc;
+  font-size: 34pt;
+  font-weight: bold;
+  text-align: center;
+  margin: 3px;
+  padding-top: 10px;
+  cursor: pointer;
 }
 div.pendingDrop {
-    opacity: 0.5;
+  opacity: 0.5;
 }
 
 .sectionDropArea {
@@ -98,119 +102,138 @@ div.pendingDrop {
   gap: 10px;
 }
 .drop {
-    width: 100%;
-    height: 70px;
-    background-color: #F8FAFC;
-    border: 1px solid #E6E6E6;
-    border-radius: 10px;
-    color: #287E8F;
-    font-size: 34pt;
-    font-weight: bold;
-    padding-top: 20px;
-    margin: auto;
-    overflow: auto;
-    margin: auto;
-    text-align: center;
+  width: 100%;
+  height: 70px;
+  background-color: #f8fafc;
+  border: 1px solid #e6e6e6;
+  border-radius: 10px;
+  color: #287e8f;
+  font-size: 34pt;
+  font-weight: bold;
+  padding-top: 20px;
+  margin: auto;
+  overflow: auto;
+  margin: auto;
+  text-align: center;
 }
 .highlight {
-    background-color: #a9d6c4;
+  background-color: #a9d6c4;
 }
 
+.btn {
+  width: 80px;
+  height: 55px;
+  background-color: #e85e76;
+  color: #f8fafc;
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 34px;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+}
 
+@media (min-width: 1051px) and (max-width: 1220px) {
+  .boxesContainer {
+    grid-template-columns: repeat(12, 1fr);
+  }
+}
+
+@media (min-width: 706px) and (max-width: 1050px) {
+  .boxesContainer {
+    grid-template-columns: repeat(8, 1fr);
+  }
+  .boxesContainer span {
+    font-size: 22pt;
+  }
+  .boxesContainer div {
+    width: 70px;
+    height: 60px;
+    font-size: 28pt;
+  }
+}
+
+@media (min-width: 451px) and (max-width: 705px) {
+  body {
+    gap: 3px;
+    margin-top: 5px;
+  }
+  div.content {
+    padding: 5px;
+  }
+  .boxesContainer {
+    grid-template-columns: repeat(6, 1fr);
+  }
+  .boxesContainer span {
+    font-size: 16pt;
+  }
+  .boxesContainer div {
+    width: 60px;
+    height: 50px;
+    font-size: 24pt;
+    padding: 5px;
+  }
+  .sectionDropArea {
+    margin-top: 5px;
+    height: 150px;
+    gap: 3px;
+  }
+  .drop {
+    font-size: 28pt;
+  }
   .btn {
-   width: 80px;
-    height: 55px;
-    background-color: #E85E76;
-    color: #F8FAFC;
-    border: none;
-    border-radius: 10px;
-    padding: 10px;
-    font-size: 34px;
-    font-weight: bold;
-    text-align: center;
-    cursor: pointer;
+    width: 70px;
+    height: 45px;
+    font-size: 28px;
   }
-  
+  br {
+    display: none;
+  }
+}
 
-  @media (min-width: 1051px) and (max-width: 1220px) {
-    .source {grid-template-columns: repeat(12,1fr);}
-
+@media (max-width: 450px) {
+  body {
+    gap: 0px;
+    margin-top: 2px;
   }
-  
-  @media (min-width: 706px) and (max-width: 1050px) {
-    .source {grid-template-columns: repeat(8,1fr);}
-    .source span {font-size: 22pt;}
-    .source div {
-        width: 70px;
-        height: 60px;
-        font-size: 28pt;
-    } 
+  h2 {
+    font-size: 20pt;
   }
-  
-  
-  @media (min-width: 451px) and (max-width: 705px) {
-    body {
-      gap: 3px;
-      margin-top: 5px;
-    }
-    div.content {padding: 5px;}
-    .source {grid-template-columns: repeat(6,1fr);}
-    .source span {font-size: 16pt;}
-    .source div {
-        width: 60px;
-        height: 50px;
-        font-size: 24pt;
-        padding: 5px;
-    } 
-    .sectionDropArea {
-      margin-top: 5px;
-      height: 150px;
-      gap: 3px;
-    }
-    .drop {font-size: 28pt;}
-    .btn {
-      width: 70px;
-       height: 45px;
-       font-size: 28px;
-     }
-     br {
-      display: none;
-     }
+  div.content {
+    padding: 2px;
   }
-
-  @media (max-width: 450px) {
-    body {
-      gap: 0px;
-      margin-top: 2px;
-    }
-    h2 {font-size: 20pt;}
-    div.content {padding: 2px;}
-    .container {
-      padding: 5px;
-    }
-    .source {grid-template-columns: repeat(5,1fr);}
-    .source.span {grid-template-columns: repeat(4,1fr);}
-    .source span {font-size: 12pt;}
-    .source div {
-        width: 35px;
-        height: 27px;
-        font-size: 16pt;
-        margin: 1px;
-        padding: 5px;
-    } 
-    .sectionDropArea {
-      margin-top: 2px;
-      height: 150px;
-       gap: 2px;
-    }
-    .drop {
-      font-size: 20pt;
-      padding-top: 10px;
-    }
-    .btn {
-      width: 60px;
-       height: 40px;
-       font-size: 20px;
-     }
-
+  .container {
+    padding: 5px;
   }
+  .boxesContainer {
+    grid-template-columns: repeat(5, 1fr);
+  }
+  .boxesContainer.span {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .boxesContainer span {
+    font-size: 12pt;
+  }
+  .boxesContainer div {
+    width: 35px;
+    height: 27px;
+    font-size: 16pt;
+    margin: 1px;
+    padding: 5px;
+  }
+  .sectionDropArea {
+    margin-top: 2px;
+    height: 150px;
+    gap: 2px;
+  }
+  .drop {
+    font-size: 20pt;
+    padding-top: 10px;
+  }
+  .btn {
+    width: 60px;
+    height: 40px;
+    font-size: 20px;
+  }
+}
